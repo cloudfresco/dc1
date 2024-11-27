@@ -3,7 +3,7 @@ syntax = "proto3";
 package internal.proto.tax.v1;
 
 import "buf/validate/validate.proto";
-import "common/v1/common.proto";
+import "internal/proto/common/v1/common.proto";
 
 option go_package = "github.com/cloudfresco/dc1/internal/proto-gen/tax/v1";
 

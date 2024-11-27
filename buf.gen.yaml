@@ -1,11 +1,5 @@
 version: v2
 
-lint:
-  use:
-    - STANDARD
-breaking:
-  use:
-    - FILE
 plugins:
   - remote: buf.build/bufbuild/validate-go:v1.1.0
     out: internal/proto-gen

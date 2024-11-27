@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package internal.proto.party.v1;
 
-import "common/v1/common.proto";
+import "internal/proto/common/v1/common.proto";
 
 option go_package = "github.com/cloudfresco/dc1/internal/proto-gen/party/v1";
 

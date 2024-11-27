@@ -3,8 +3,8 @@ syntax = "proto3";
 package internal.proto.party.v1;
 //package v1;
 
-import "google/protobuf/timestamp.proto";
-import "common/v1/common.proto";
+//import "google/protobuf/timestamp.proto";
+import "internal/proto/common/v1/common.proto";
 
 option go_package = "github.com/cloudfresco/dc1/internal/proto-gen/party/v1";
 
