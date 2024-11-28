@@ -1,6 +1,6 @@
 version: v2
 modules:
-  - path: .
+  - path: internal/proto
     name: buf.build/dc1/dc1
 lint:
   use:
