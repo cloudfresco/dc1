@@ -4,7 +4,7 @@ package common.v1;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/cloudfresco/dc1/internal/proto-gen/common/v1";
+option go_package = "github.com/cloudfresco/dc1/internal/protogen/common/v1";
 
 message GetByIdRequest {
   uint32 id = 1;

@@ -12,7 +12,7 @@ import (
 	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 
 	// interceptors "github.com/cloudfresco/dc1/internal/interceptors"
-	partyproto "github.com/cloudfresco/dc1/internal/proto-gen/party/v1"
+	partyproto "github.com/cloudfresco/dc1/internal/protogen/party/v1"
 	"github.com/cloudfresco/dc1/test"
 	_ "github.com/go-sql-driver/mysql"
 	"go.uber.org/zap"

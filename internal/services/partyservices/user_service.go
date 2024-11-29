@@ -12,8 +12,8 @@ import (
 
 	"github.com/cloudfresco/dc1/internal/common"
 	"github.com/cloudfresco/dc1/internal/config"
-	commonproto "github.com/cloudfresco/dc1/internal/proto-gen/common/v1"
-	partyproto "github.com/cloudfresco/dc1/internal/proto-gen/party/v1"
+	commonproto "github.com/cloudfresco/dc1/internal/protogen/common/v1"
+	partyproto "github.com/cloudfresco/dc1/internal/protogen/party/v1"
 	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"go.opentelemetry.io/contrib/propagators/aws/xray"
 	"go.opentelemetry.io/otel"

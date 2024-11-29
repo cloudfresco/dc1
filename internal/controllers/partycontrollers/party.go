@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/cloudfresco/dc1/internal/common"
-	commonproto "github.com/cloudfresco/dc1/internal/proto-gen/common/v1"
-	partyproto "github.com/cloudfresco/dc1/internal/proto-gen/party/v1"
+	commonproto "github.com/cloudfresco/dc1/internal/protogen/common/v1"
+	partyproto "github.com/cloudfresco/dc1/internal/protogen/party/v1"
 	"go.uber.org/zap"
 	"google.golang.org/grpc/metadata"
 )

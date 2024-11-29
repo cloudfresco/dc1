@@ -3,7 +3,7 @@ package common
 import (
 	"context"
 
-	commonproto "github.com/cloudfresco/dc1/internal/proto-gen/common/v1"
+	commonproto "github.com/cloudfresco/dc1/internal/protogen/common/v1"
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/zap"
 )

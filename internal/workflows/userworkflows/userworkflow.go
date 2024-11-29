@@ -3,7 +3,7 @@ package userworkflows
 import (
 	"time"
 
-	partyproto "github.com/cloudfresco/dc1/internal/proto-gen/party/v1"
+	partyproto "github.com/cloudfresco/dc1/internal/protogen/party/v1"
 
 	"go.uber.org/cadence/workflow"
 	"go.uber.org/zap"

@@ -6,9 +6,9 @@ package party.v1;
 //import "google/protobuf/timestamp.proto";
 import "common/v1/common.proto";
 
-option go_package = "github.com/cloudfresco/dc1/internal/proto-gen/party/v1";
+option go_package = "github.com/cloudfresco/dc1/internal/protogen/party/v1";
 
-//option go_package = "./internal/proto-gen/party/v1";
+//option go_package = "./internal/protogen/party/v1";
 
 // The UserService service definition.
 service UserService {

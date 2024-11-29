@@ -22,7 +22,7 @@ import (
 
 	// workflows "github.com/cloudfresco/dc1/internal/controllers/partycontrollers"
 	// interceptors "github.com/cloudfresco/dc1/internal/interceptors"
-	partyproto "github.com/cloudfresco/dc1/internal/proto-gen/party/v1"
+	partyproto "github.com/cloudfresco/dc1/internal/protogen/party/v1"
 )
 
 // This needs to be done as part of a bootstrap step when the process starts.

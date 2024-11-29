@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/cloudfresco/dc1/internal/common"
-	partyproto "github.com/cloudfresco/dc1/internal/proto-gen/party/v1"
+	partyproto "github.com/cloudfresco/dc1/internal/protogen/party/v1"
 
 	// workflows "github.com/cloudfresco/dc1/internal/workflows"
 

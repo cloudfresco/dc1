@@ -3,7 +3,7 @@ package userworkflows
 import (
 	"context"
 
-	partyproto "github.com/cloudfresco/dc1/internal/proto-gen/party/v1"
+	partyproto "github.com/cloudfresco/dc1/internal/protogen/party/v1"
 	"go.uber.org/zap"
 	"google.golang.org/grpc/metadata"
 )

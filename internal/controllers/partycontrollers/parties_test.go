@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/cloudfresco/dc1/internal/common"
-	commonproto "github.com/cloudfresco/dc1/internal/proto-gen/common/v1"
-	partyproto "github.com/cloudfresco/dc1/internal/proto-gen/party/v1"
+	commonproto "github.com/cloudfresco/dc1/internal/protogen/common/v1"
+	partyproto "github.com/cloudfresco/dc1/internal/protogen/party/v1"
 	"github.com/cloudfresco/dc1/test"
 	_ "github.com/go-sql-driver/mysql"
 	"go.uber.org/zap"

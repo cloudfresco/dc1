@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: tax/v1/tax.proto
 
-package taxv1
+package v1
 
 import (
 	context "context"

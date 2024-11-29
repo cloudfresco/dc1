@@ -11,7 +11,7 @@ import (
 	"github.com/cloudfresco/dc1/internal/config"
 	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 
-	partyproto "github.com/cloudfresco/dc1/internal/proto-gen/party/v1"
+	partyproto "github.com/cloudfresco/dc1/internal/protogen/party/v1"
 	// interceptors "github.com/cloudfresco/dc1/internal/interceptors"
 
 	"github.com/throttled/throttled/v2/store/goredisstore"
@@ -144,9 +144,15 @@ func Init(log *zap.Logger, rateOpt *config.RateOptions, jwtOpt *config.JWTOption
 
 	// mux.Handle("/v0.1/u/", common.AddMiddleware(uc, common.CorsMiddleware))
 
-	mux.Handle("/v0.1/users", common.AddMiddleware(usc, common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
+	//mux.Handle("/v0.1/users", common.AddMiddleware(usc, common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
 
-	mux.Handle("/v0.1/users/", common.AddMiddleware(usc, common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
+	//mux.Handle("/v0.1/users/", common.AddMiddleware(usc, common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
+
+  mux.Handle("/v0.1/users", common.AddMiddleware(usc,
+		common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain), common.ValidatePermissions([]string{"users:cud", "users:read"}, serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
+
+	mux.Handle("/v0.1/users/", common.AddMiddleware(usc,
+		common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain), common.ValidatePermissions([]string{"users:cud", "users:read"}, serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
 
 	return nil
 }
@@ -233,9 +239,15 @@ func InitTest(log *zap.Logger, rateOpt *config.RateOptions, jwtOpt *config.JWTOp
 
 	// mux.Handle("/v0.1/u/", common.AddMiddleware(uc, common.CorsMiddleware))
 
-	mux.Handle("/v0.1/users", common.AddMiddleware(hrlUser.RateLimit(usc), common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
+	//mux.Handle("/v0.1/users", common.AddMiddleware(hrlUser.RateLimit(usc), common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
 
-	mux.Handle("/v0.1/users/", common.AddMiddleware(hrlUser.RateLimit(usc), common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
+	//mux.Handle("/v0.1/users/", common.AddMiddleware(hrlUser.RateLimit(usc), common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
+
+  mux.Handle("/v0.1/users", common.AddMiddleware(hrlUser.RateLimit(usc),
+		common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain), common.ValidatePermissions([]string{"users:cud", "users:read"}, serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
+
+	mux.Handle("/v0.1/users/", common.AddMiddleware(hrlUser.RateLimit(usc),
+		common.EnsureValidToken(serverOpt.Auth0Audience, serverOpt.Auth0Domain), common.ValidatePermissions([]string{"users:cud", "users:read"}, serverOpt.Auth0Audience, serverOpt.Auth0Domain)))
 
 	return nil
 }

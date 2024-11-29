@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/cloudfresco/dc1/internal/common"
-	commonproto "github.com/cloudfresco/dc1/internal/proto-gen/common/v1"
-	partyproto "github.com/cloudfresco/dc1/internal/proto-gen/party/v1"
+	commonproto "github.com/cloudfresco/dc1/internal/protogen/common/v1"
+	partyproto "github.com/cloudfresco/dc1/internal/protogen/party/v1"
 	userworkflows "github.com/cloudfresco/dc1/internal/workflows/userworkflows"
 
 	"github.com/pborman/uuid"

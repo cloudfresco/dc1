@@ -16,7 +16,7 @@ SHELL := /bin/bash
 #LDFLAGS=-ldflags "-X=main.Version=$(VERSION) -X=main.Build=$(BUILD)"
 
 # go source files, ignore vendor directory
-SRC = $(shell find . -type f -name '*.go' -not -path "./internal/proto-gen/*")
+SRC = $(shell find . -type f -name '*.go' -not -path "./internal/protogen/*")
 SRCPROTO = $(shell find . -type f -name '*.proto'")
 MFILE = cmd/main.go
 EXEC = cmd/cdcsa
@@ -28,7 +28,7 @@ MFILEW = cmd/userworker/main.go
 EXECW = cmd/userworker/worksrv
 
 
-PKGS = $(go list ./... | grep -v /proto/ | grep -v /proto-gen/)
+PKGS = $(go list ./... | grep -v /proto/ | grep -v /protogen/)
 
 .PHONY: all chk lint proto build test clean fmt gocritic staticcheck errcheck revive golangcilint protofmt protolint tidy pkgupd run runp runu runw runprod doc
 
